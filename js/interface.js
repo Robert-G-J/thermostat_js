@@ -6,10 +6,14 @@ $(document).ready(function() {
 
   $('#psm_on').click(function( clickEvent ) {
     thermostat.powerSavingOn();
+    $('#power-saving-status').text(thermostat.powerSaving);
+    console.log(thermostat.powerSaving);
   });
 
-  $('#psm_off').click(function() {
-    thermostat.powerSavingOff();
+  $('#psm_off').click(function() { 
+    thermostat.powerSavingOff();  
+    $('#power-saving-status').text(thermostat.powerSaving);
+    console.log(thermostat.powerSaving);
   });
 
   $('#temp-up').on('click', function( clickEvent ) {
@@ -29,6 +33,6 @@ $(document).ready(function() {
     console.log(thermostat.currentTemperature());
   });
 
-
+  $('#power-saving-status').text(thermostat.powerSaving);
 
 });

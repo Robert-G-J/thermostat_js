@@ -1,0 +1,25 @@
+body {
+
+  font-weight: normal
+
+}
+
+span {
+
+  font-weight: bold;
+
+}
+
+.warning {
+
+  color: red;
+  background-color: black
+
+}
+
+.good {
+
+  color: green;
+  background-color: white;
+
+}
