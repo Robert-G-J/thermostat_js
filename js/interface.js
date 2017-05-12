@@ -39,11 +39,8 @@ $(document).ready(function() {
 
   console.log(1);
 
-  $.getJSON('http://api.openweathermap.org/data/2.5/weather?q=London,uk?APPID={}', function(getWeather) {
-    console.log(2);
-    var MyObj = JSON.parse(getWeather);
-    console.log(getWeather);
-    console.log(MyObject);
+  $.getJSON('http://api.openweathermap.org/data/2.5/weather?q=London,ukid=524901&APPID=18e1478b463128c7946ee3e49b259d84', function(getWeather) {
+    $('#weather_london').text(getWeather.main.temp)
   });
 console.log(3);
 });
