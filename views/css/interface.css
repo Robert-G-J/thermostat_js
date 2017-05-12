@@ -10,6 +10,11 @@ span {
 
 }
 
+background {
+  background-image: url(../image/escheresque.png);
+}
+
+
 .high-usage {
 
   color: red;
