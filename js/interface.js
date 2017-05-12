@@ -8,9 +8,9 @@ $(document).ready(function() {
 
   function temperatureUpdate() {
     $('#temperature').text(thermostat.temperature);
-    $('#energy-usage-status').text(thermostat.energyUsage());   
-    $('#energy-usage-status').attr('class', thermostat.energyUsage()); 
-  };
+    $('#energy-usage-status').text(thermostat.energyUsage());
+    $('#energy-usage-status').attr('class', thermostat.energyUsage());
+  }
 
   $('#psm_on').click(function( clickEvent ) {
     thermostat.powerSavingOn();
@@ -37,8 +37,13 @@ $(document).ready(function() {
     temperatureUpdate();
   });
 
+  console.log(1);
 
-
-
-
+  $.getJSON('http://api.openweathermap.org/data/2.5/weather?q=London,uk?APPID={}', function(getWeather) {
+    console.log(2);
+    var MyObj = JSON.parse(getWeather);
+    console.log(getWeather);
+    console.log(MyObject);
+  });
+console.log(3);
 });
