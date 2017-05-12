@@ -4,33 +4,40 @@ $(document).ready(function() {
 
   $('#temperature').text(thermostat.temperature);
   $('#power-saving-status').text(thermostat.powerSaving);
+  $('#energy-usage-status').text(thermostat.energyUsage());
+
+  function temperatureUpdate() {
+    $('#temperature').text(thermostat.temperature);
+    $('#energy-usage-status').text(thermostat.energyUsage());   
+    $('#energy-usage-status').attr('class', thermostat.energyUsage()); 
+  };
 
   $('#psm_on').click(function( clickEvent ) {
     thermostat.powerSavingOn();
     $('#power-saving-status').text(thermostat.powerSaving);
-    console.log(thermostat.powerSaving);
   });
 
   $('#psm_off').click(function() {
     thermostat.powerSavingOff();
     $('#power-saving-status').text(thermostat.powerSaving);
-    console.log(thermostat.powerSaving);
   });
 
   $('#temp-up').on('click', function( clickEvent ) {
     thermostat.up();
-    $('#temperature').text(thermostat.temperature);
+    temperatureUpdate();
   });
 
   $('#temp-down').on('click', function() {
     thermostat.down();
-    $('#temperature').text(thermostat.temperature);
+    temperatureUpdate();
   });
 
   $('#reset').on('click', function() {
     thermostat.resetTemp();
-    $('#temperature').text(thermostat.temperature);
+    temperatureUpdate();
   });
+
+
 
 
 

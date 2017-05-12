@@ -10,16 +10,20 @@ span {
 
 }
 
-.warning {
+.high-usage {
 
   color: red;
-  background-color: black
 
 }
 
-.good {
+.medium-usage {
+
+  color: black;
+
+}
+
+.low-usage {
 
   color: green;
-  background-color: white;
 
 }
